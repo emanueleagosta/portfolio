@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emanuele Agosta – Product Designer</title>
+  <meta name="description"
+    content="Portfolio of Emanuele Agosta – Product Designer, Learning Experience Designer, Apple Certified Trainer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-pill nav-name">Emanuele Agosta</a>
+      <div class="nav-right">
+        <a href="mailto:hello@emanueleagosta.com" class="nav-link">Email</a>
+        <a href="#" class="nav-link">LinkedIn</a>
+        <a href="#" class="nav-link">App Store</a>
+        <button class="nav-pill nav-about" id="about-toggle">About</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-layout">
+    <section class="archive-column">
+
+      <!-- Filter Pills -->
+      <div class="filter-bar">
+        <button class="filter-pill active" data-filter="product-design">Product Design</button>
+        <button class="filter-pill" data-filter="learning">Work Experience</button>
+        <button class="filter-pill" data-filter="articles">Articles</button>
+      </div>
+
+      <!-- Project Grid -->
+      <div class="project-grid">
+
+        <!-- Product Design Projects -->
+        <a href="project-broll.html" class="project-card wide-card" data-category="product-design">
+          <div class="project-thumbnail">
+            <img src="Assets/Product Design/B.Roll/B.Roll-thumbnail.png" alt="B.Roll app thumbnail"
+              class="thumbnail-img">
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">B.Roll – Movies & TV Tracker</h3>
+            <p class="project-subtitle">iOS and iPadOS App</p>
+          </div>
+        </a>
+
+        <a href="project-geoshot.html" class="project-card wide-card" data-category="product-design">
+          <div class="project-thumbnail">
+            <img src="Assets/Product Design/Geoshot/Geoshot-thumbnail.png" alt="Geoshot app thumbnail"
+              class="thumbnail-img">
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Geoshot - Map snapshots</h3>
+            <p class="project-subtitle">iOS App</p>
+          </div>
+        </a>
+
+
+
+        <a href="project.html" class="project-card wide-card" data-category="product-design">
+          <div class="project-thumbnail">
+            <img src="Assets/Product Design/B.Roll/B.Roll_thumbnail.png" alt="Design System Components thumbnail"
+              class="thumbnail-img">
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Design System Components</h3>
+            <p class="project-subtitle">Behance</p>
+          </div>
+        </a>
+
+        <a href="project.html" class="project-card wide-card" data-category="product-design">
+          <div class="project-thumbnail">
+            <img src="Assets/Product Design/B.Roll/B.Roll_thumbnail.png" alt="Interaction Patterns thumbnail"
+              class="thumbnail-img">
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Interaction Patterns for iOS</h3>
+            <p class="project-subtitle">Behance</p>
+          </div>
+        </a>
+
+        <a href="project.html" class="project-card wide-card" data-category="product-design">
+          <div class="project-thumbnail">
+            <img src="Assets/Product Design/B.Roll/B.Roll_thumbnail.png" alt="Media Player Concept thumbnail"
+              class="thumbnail-img">
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Media Player Concept</h3>
+            <p class="project-subtitle">Behance</p>
+          </div>
+        </a>
+
+        <a href="project.html" class="project-card wide-card" data-category="product-design">
+          <div class="project-thumbnail">
+            <img src="Assets/Product Design/B.Roll/B.Roll_thumbnail.png" alt="Onboarding Flow thumbnail"
+              class="thumbnail-img">
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Onboarding Flow Exploration</h3>
+            <p class="project-subtitle">Behance</p>
+          </div>
+        </a>
+
+        <!-- Work Experience Projects -->
+        <a href="project.html" class="project-card compact-card" data-category="learning">
+          <div class="project-thumbnail">
+            <img src="Assets/Work Experience/Letsvision_2025.jpeg" alt="ADAS Learning Program thumbnail"
+              class="thumbnail-img">
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">ADAS Learning Program</h3>
+            <p class="project-subtitle">Instructional Design</p>
+          </div>
+        </a>
+
+        <a href="project.html" class="project-card compact-card" data-category="learning">
+          <div class="project-thumbnail">
+            <img src="Assets/Work Experience/Letsvision_2025.jpeg" alt="Tesla Internal Training thumbnail"
+              class="thumbnail-img">
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Tesla Internal Training</h3>
+            <p class="project-subtitle">Instructional Design</p>
+          </div>
+        </a>
+
+        <a href="project.html" class="project-card compact-card" data-category="learning">
+          <div class="project-thumbnail">
+            <img src="Assets/Work Experience/Letsvision_2025.jpeg" alt="Academy Mentorship thumbnail"
+              class="thumbnail-img">
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Academy Mentorship</h3>
+            <p class="project-subtitle">Curriculum Design</p>
+          </div>
+        </a>
+
+        <!-- Articles (dynamically loaded from Create with Swift) -->
+        <div id="articles-container">
+          <!-- Skeleton placeholders shown while loading -->
+          <div class="article-skeleton project-card small-card" data-category="articles">
+            <div class="project-thumbnail skeleton-thumbnail"></div>
+            <div class="project-info">
+              <div class="skeleton-title"></div>
+              <div class="skeleton-subtitle"></div>
+            </div>
+          </div>
+          <div class="article-skeleton project-card small-card" data-category="articles">
+            <div class="project-thumbnail skeleton-thumbnail"></div>
+            <div class="project-info">
+              <div class="skeleton-title"></div>
+              <div class="skeleton-subtitle"></div>
+            </div>
+          </div>
+          <div class="article-skeleton project-card small-card" data-category="articles">
+            <div class="project-thumbnail skeleton-thumbnail"></div>
+            <div class="project-info">
+              <div class="skeleton-title"></div>
+              <div class="skeleton-subtitle"></div>
+            </div>
+          </div>
+          <div class="article-skeleton project-card small-card" data-category="articles">
+            <div class="project-thumbnail skeleton-thumbnail"></div>
+            <div class="project-info">
+              <div class="skeleton-title"></div>
+              <div class="skeleton-subtitle"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Fallback if articles fail to load -->
+        <a href="https://www.createwithswift.com/author/emanueleagosta/" target="_blank" rel="noopener"
+          class="articles-fallback" id="articles-fallback" data-category="articles" style="display: none;">
+          View articles on Create with Swift ↗
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- About Overlay Panel -->
+  <div class="about-backdrop" id="about-backdrop"></div>
+  <aside class="about-panel" id="about-panel" aria-hidden="true">
+    <div class="about-panel-inner">
+
+      <div class="about-narrative">
+        <p>I design products and learning experiences that help people understand and use complex technology across the
+          Apple ecosystem.</p>
+
+        <p>My path started in New Media Art, then led me to the Apple Developer Academy in Naples — first as a student,
+          then as a mentor and an Apple Certified Trainer. From there, I moved to Tesla as an Instructional Designer,
+          creating training for advanced automotive technology.</p>
+
+        <p>When I design, I care about making complex topics approachable. I think a lot about how to translate
+          technical depth into clear, useful interfaces — whether that's a shipped app, a training curriculum, or a
+          conference talk. I collaborate closely with engineers, PMs, and subject-matter experts to get it right.</p>
+      </div>
+
+      <div class="about-meta">
+        <div class="meta-row">
+          <span class="meta-label">Currently</span>
+          <span class="meta-value">Tesla, Amsterdam</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Previously</span>
+          <span class="meta-value">Apple Developer Academy, Naples</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Also</span>
+          <span class="meta-value">Speaker, writer, and side-project app developer (B.Roll, Geoshot)</span>
+        </div>
+      </div>
+
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
