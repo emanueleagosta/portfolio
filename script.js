@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const aboutToggle = document.getElementById('about-toggle');
   const aboutPanel = document.getElementById('about-panel');
   const aboutBackdrop = document.getElementById('about-backdrop');
+  const aboutCloseBtn = document.getElementById('about-close');
 
   if (aboutToggle && aboutPanel && aboutBackdrop) {
     function openAbout() {
@@ -51,6 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close on backdrop click
     aboutBackdrop.addEventListener('click', closeAbout);
+
+    // Close on X button click
+    if (aboutCloseBtn) {
+      aboutCloseBtn.addEventListener('click', closeAbout);
+    }
 
     // Close on Escape key
     document.addEventListener('keydown', (e) => {
