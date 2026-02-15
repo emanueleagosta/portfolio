@@ -85,9 +85,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!titleEl) return;
 
+      // Helper to fix relative URLs
+      const resolveUrl = (url) => {
+        if (!url) return '';
+        if (url.startsWith('http')) return url;
+        // Check if it's protocol-relative or root-relative
+        if (url.startsWith('//')) return 'https:' + url;
+        if (url.startsWith('/')) return 'https://www.createwithswift.com' + url;
+        return url;
+      };
+
+      const rawLink = linkEl ? linkEl.getAttribute('href') : '#';
+      const rawImg = imgEl ? (imgEl.getAttribute('src') || imgEl.getAttribute('srcset')?.split(' ')[0]) : ''; // Try src, fallback to first srcset
+
       articles.push({
-        url: linkEl ? linkEl.href : '#',
-        image: imgEl ? imgEl.src : '',
+        url: resolveUrl(rawLink),
+        image: resolveUrl(rawImg),
         category: tagEl ? tagEl.textContent.trim() : '',
         title: titleEl.textContent.trim(),
         subtitle: excerptEl ? excerptEl.textContent.trim() : ''
