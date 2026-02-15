@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Dynamic Articles from Create with Swift ---
   const AUTHOR_URL = 'https://www.createwithswift.com/author/emanueleagosta/';
-  const CORS_PROXY = 'https://api.allorigins.win/raw?url=';
+  const CORS_PROXY = 'https://corsproxy.io/?';
 
   async function fetchPage(url) {
     const response = await fetch(CORS_PROXY + encodeURIComponent(url));
