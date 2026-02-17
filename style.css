@@ -1066,7 +1066,21 @@ button {
   }
 
   .mockup-row {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-sm);
+    /* Reset margins/paddings from previous flex layout */
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    overflow-x: visible;
+  }
+
+  .mockup-frame {
+    flex: unset;
+    scroll-snap-align: unset;
   }
 
   .feature-pair {
