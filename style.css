@@ -217,6 +217,7 @@ button {
   background: var(--pill-bg);
   border: 1px solid var(--border-pill);
   transition: all 0.22s var(--ease);
+  white-space: nowrap;
 }
 
 .filter-pill:hover {
@@ -238,6 +239,10 @@ button {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--spacing-lg);
+}
+
+.project-grid.grid-4col {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 /* ============================================
@@ -1059,6 +1064,11 @@ button {
 
   .about-panel {
     width: 340px;
+  }
+
+  /* Medium screens: 4→2 columns for articles and talks */
+  .project-grid.grid-4col {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

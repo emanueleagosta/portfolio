@@ -183,11 +183,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Adjust grid columns for articles and talks
+    // Adjust grid columns for articles and talks via CSS class
     if (filter === 'articles' || filter === 'talks') {
-      grid.style.gridTemplateColumns = 'repeat(4, 1fr)';
+      grid.classList.add('grid-4col');
     } else {
-      grid.style.gridTemplateColumns = '';
+      grid.classList.remove('grid-4col');
     }
 
     // Collect visible cards and stagger their animation
