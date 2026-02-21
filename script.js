@@ -171,6 +171,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const filter = activeFilter.dataset.filter;
 
     allCards.forEach(card => {
+      // Ensure transition is set for animation
+      card.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
       if (card.dataset.category === filter) {
         card.style.display = '';
         card.style.opacity = '0';
@@ -188,14 +190,22 @@ document.addEventListener('DOMContentLoaded', () => {
       grid.style.gridTemplateColumns = '';
     }
 
+    // Collect visible cards and stagger their animation
+    const visibleCards = [...allCards].filter(c => c.dataset.category === filter);
+
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
-        allCards.forEach(card => {
-          if (card.dataset.category === filter) {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          }
+        visibleCards.forEach((card, i) => {
+          card.style.transitionDelay = `${i * 0.04}s`;
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
         });
+        // Clear delays after animation completes
+        setTimeout(() => {
+          visibleCards.forEach(card => {
+            card.style.transitionDelay = '';
+          });
+        }, visibleCards.length * 40 + 400);
       });
     });
   }

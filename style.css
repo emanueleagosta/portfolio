@@ -95,6 +95,13 @@ button {
   align-items: center;
 }
 
+/* Center group for filter pills in navbar */
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
 .nav-pill {
   display: inline-flex;
   align-items: center;
@@ -121,7 +128,12 @@ button {
 }
 
 .nav-name {
+  font-size: 0.8125rem;
   font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .nav-right {
@@ -173,7 +185,7 @@ button {
    MAIN LAYOUT — alignment with nav
    ============================================ */
 .main-layout {
-  padding: 88px var(--nav-h-padding) var(--spacing-3xl);
+  padding: 108px var(--nav-h-padding) var(--spacing-3xl);
 }
 
 .archive-column {
@@ -296,6 +308,10 @@ button {
   -webkit-backdrop-filter: blur(8px);
   letter-spacing: -0.005em;
   line-height: 1.3;
+  max-width: calc(100% - var(--spacing-sm) * 2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* --- Articles Container (display: contents for grid participation) --- */
@@ -1053,11 +1069,37 @@ button {
 
   .main-layout,
   .detail-page {
-    padding: 72px var(--nav-h-padding) var(--spacing-2xl);
+    padding: 120px var(--nav-h-padding) var(--spacing-2xl);
   }
 
   .navbar {
     padding: 12px var(--nav-h-padding);
+  }
+
+  /* Wrap navbar on mobile: name+About on top, pills below */
+  .nav-inner {
+    flex-wrap: wrap;
+  }
+
+  .nav-center {
+    order: 3;
+    width: 100%;
+    margin-top: 10px;
+    gap: var(--spacing-xs);
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .nav-center::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-center .filter-pill {
+    font-size: 0.75rem;
+    padding: 6px 14px;
   }
 
   .project-grid {
@@ -1096,15 +1138,6 @@ button {
 
   .feature-img--zoomed {
     height: auto;
-  }
-
-  .filter-bar {
-    gap: var(--spacing-xs);
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
   }
 
   .filter-pill {
