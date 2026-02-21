@@ -181,8 +181,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Adjust grid columns for articles
-    if (filter === 'articles') {
+    // Adjust grid columns for articles and talks
+    if (filter === 'articles' || filter === 'talks') {
       grid.style.gridTemplateColumns = 'repeat(4, 1fr)';
     } else {
       grid.style.gridTemplateColumns = '';
