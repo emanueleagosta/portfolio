@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Music Classical – Emanuele Agosta</title>
+    <meta name="description"
+        content="Apple Music Classical UX Case Study. Identifying differences between Apple Music and Apple Music Classical. Case study by Emanuele Agosta.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific styling to enlarge images beyond the text container just for this page */
+        @media (min-width: 960px) {
+            .detail-img.oversize-img {
+                margin-left: -120px;
+                margin-right: -120px;
+                width: calc(100% + 240px);
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 959px) {
+            .detail-img.oversize-img {
+                margin-left: -40px;
+                margin-right: -40px;
+                width: calc(100% + 80px);
+            }
+        }
+
+        /* No hover animation on oversize images */
+        .detail-img.oversize-img img {
+            transition: none;
+        }
+
+        .detail-img.oversize-img img:hover {
+            transform: none;
+        }
+
+        .detail-img.oversize-img:hover {
+            transform: none !important;
+            box-shadow: none !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-pill nav-name">Emanuele Agosta</a>
+            <div class="nav-right">
+                <a href="https://www.linkedin.com/in/emanueleagosta/" class="nav-link" target="_blank"
+                    rel="noopener">LinkedIn</a>
+                <a href="index.html" class="nav-pill nav-about">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Detail Content -->
+    <main class="detail-page">
+        <div class="detail-inner">
+
+            <!-- Back link -->
+            <a href="index.html" class="back-link">← Back to index</a>
+
+            <!-- ============================
+           HERO
+           ============================ -->
+            <div class="detail-header">
+                <h1 class="detail-title">Apple Music Classical — UX Case Study (2023)</h1>
+                <p class="detail-subtitle">Identifying differences between Apple Music and Apple Music Classical.</p>
+                <a href="https://www.behance.net/gallery/170931499/Apple-Music-Classical-UX-case-study"
+                    class="inline-link" target="_blank" rel="noopener">
+                    Behance Link ↗
+                </a>
+            </div>
+
+            <!-- HERO MOCKUPS (3 individual frames) -->
+            <div class="mockup-row fade-in">
+                <div class="mockup-frame">
+                    <img src="Assets/Product Design/Apple Music Classical/Apple-Music-Classical-1.png"
+                        alt="Apple Music Classical">
+                </div>
+                <div class="mockup-frame">
+                    <img src="Assets/Product Design/Apple Music Classical/Apple-Music-Classical-2.png"
+                        alt="Apple Music Classical">
+                </div>
+                <div class="mockup-frame">
+                    <img src="Assets/Product Design/Apple Music Classical/Apple-Music-Classical-3.png"
+                        alt="Apple Music Classical">
+                </div>
+            </div>
+
+            <!-- ============================
+           INTRO
+           ============================ -->
+            <section class="detail-section fade-in">
+                <p>In 2023, Apple released Apple Music Classical as a standalone app focused on classical music.</p>
+                <p>The work looks at four main areas of the app: Search, Listen Now, Browse and Library; and proposes UX
+                    and UI refinements to improve alignment with Apple Music while still respecting the specifics of
+                    classical metadata and listening habits.</p>
+            </section>
+
+            <!-- ============================
+           WHY CLASSICAL
+           ============================ -->
+            <section class="detail-section detail-section--lead fade-in">
+                <h2 class="section-headline">Why classical needs a different lens.</h2>
+                <p>Classical music is difficult to categorize. It spans centuries, styles, ensembles and recording
+                    histories, and a single work can exist in many versions with different performers, conductors and
+                    languages. <strong>Traditional tags such as artist, album and song title are not enough.</strong>
+                </p>
+                <p>Apple Music Classical was created to make this world easier to search and browse, but it inevitably
+                    diverges from Apple Music in structure and behavior. <strong>This case study examines those
+                        differences and asks how far the two apps should converge to support both beginners and
+                        experts.</strong></p>
+            </section>
+
+            <div class="detail-img oversize-img fade-in">
+                <img src="Assets/Product Design/Apple Music Classical/Apple-Music-Classical-4.png"
+                    alt="Apple Music Classical — Current information architecture.">
+                <p class="detail-img-caption" style="text-align: center;">Apple Music Classical — Current information
+                    architecture.</p>
+            </div>
+
+            <!-- ============================
+           SEARCH
+           ============================ -->
+            <section class="detail-section fade-in" style="margin-top: var(--spacing-3xl);">
+                <h2 class="detail-section-title">Search</h2>
+                <p>Searching for classical music is not as straightforward as finding a Dua Lipa song. Traditional music
+                    metadata usually focuses on artist, genre, song title or album title. Classical music metadata adds
+                    many more dimensions, including composers, conductors, orchestras and choirs.</p>
+                <p>Because there is no standard classification system for classical music, users often struggle to find
+                    specific pieces or recordings. A single work can have many versions by different performers and in
+                    different languages. For example, Giacomo Puccini’s opera <em>La Bohème</em> has been recorded and
+                    performed countless times, making it hard to pinpoint a specific interpretation.</p>
+            </section>
+
+            <div class="detail-img oversize-img fade-in">
+                <img src="Assets/Product Design/Apple Music Classical/Apple-Music-Classical-5.png"
+                    alt="La Bohème by Giacomo Puccini searched on Spotify and Apple Music Classical.">
+                <p class="detail-img-caption" style="text-align: center;"><em>La Bohème</em> by Giacomo Puccini searched
+                    on Spotify and Apple Music Classical.</p>
+            </div>
+
+            <section class="detail-section fade-in">
+                <p>The Search tab in Apple Music Classical differs from the one in Apple Music. It offers a list of
+                    textual suggestions without categories or recommended playlists, which are currently placed in the
+                    Browse section. <strong>Integrating catalog listings, editor‑picked playlists and categories
+                        directly into Search would help users find what they need more easily, regardless of their level
+                        of expertise, and make exploration more natural.</strong></p>
+                <p>In the concept, the segmented control is replaced by collections with a “Show All” chevron, allowing
+                    users to reveal full lists without switching views.</p>
+            </section>
+
+            <div class="detail-img oversize-img fade-in">
+                <img src="Assets/Product Design/Apple Music Classical/Apple-Music-Classical-6.png"
+                    alt="The current Search interface and the proposed concept.">
+                <p class="detail-img-caption" style="text-align: center;">The current Search interface and the proposed
+                    concept.</p>
+            </div>
+
+            <!-- ============================
+           LISTEN NOW
+           ============================ -->
+            <section class="detail-section fade-in" style="margin-top: var(--spacing-3xl);">
+                <h2 class="detail-section-title">Listen Now</h2>
+                <p>In Apple Music, the Listen Now tab provides a personalized selection of songs and playlists based on
+                    listening history and preferences. Apple Music Classical, instead, shows currently popular and new
+                    releases, without individual recommendations. This behavior overlaps with what the Browse tab is
+                    expected to do.</p>
+                <p>Integrating personalized recommendations based on the user’s interests would redefine the classical
+                    experience. <strong>A redesigned Listen Now for Apple Music Classical suggests relevant playlists,
+                        works, recordings, genres and what friends are listening to, similar to Apple Music’s Listen Now
+                        tab.</strong> This turns it into a true, personal entry point into the classical catalog.</p>
+            </section>
+
+            <div class="detail-img oversize-img fade-in">
+                <img src="Assets/Product Design/Apple Music Classical/Apple-Music-Classical-7.png"
+                    alt="The current Listen Now interface and the proposed concept.">
+                <p class="detail-img-caption" style="text-align: center;">The current Listen Now interface and the
+                    proposed concept.</p>
+            </div>
+
+            <!-- ============================
+           BROWSE
+           ============================ -->
+            <section class="detail-section fade-in" style="margin-top: var(--spacing-3xl);">
+                <h2 class="detail-section-title">Browse</h2>
+                <p>In Apple Music Classical, the Browse tab uses a segmented control to switch between Catalog,
+                    Playlists and Instruments, which creates a different experience compared to Browse in Apple Music.
+                </p>
+                <p>The proposed Browse integrates selected playlists, popular recordings and new releases, currently
+                    found in Listen Now, into a single view. Users can discover expert‑curated collections organized by
+                    factors such as mood, activity and genre, while still accessing classical‑specific dimensions like
+                    instruments.</p>
+                <p><strong>In this way, the Browse tab in Apple Music Classical offers a more familiar, Apple Music‑like
+                        structure, while still highlighting what makes classical content unique.</strong></p>
+            </section>
+
+            <div class="detail-img oversize-img fade-in">
+                <img src="Assets/Product Design/Apple Music Classical/Apple-Music-Classical-8.png"
+                    alt="The current Browse interface and the proposed concept.">
+                <p class="detail-img-caption" style="text-align: center;">The current Browse interface and the proposed
+                    concept.</p>
+            </div>
+
+            <!-- ============================
+           LIBRARY
+           ============================ -->
+            <section class="detail-section fade-in" style="margin-top: var(--spacing-3xl);">
+                <h2 class="detail-section-title">Library</h2>
+                <p>The Library tab in Apple Music Classical presents a list of filters but does not include the Recently
+                    Added section available in Apple Music. However, items added in Apple Music Classical do appear in
+                    the Recently Added section of the Apple Music library, which can create confusion. It is unclear
+                    whether this omission is intentional.</p>
+                <p>In the concept, an Edit button in the navigation bar lets users choose which lists to display or
+                    hide, such as albums or playlists. <strong>Combined with a Recently Added section, these
+                        organizational enhancements give listeners more control over albums, playlists, composers and
+                        works, and bring the Library tab closer to the Apple Music experience.</strong></p>
+            </section>
+
+            <div class="detail-img oversize-img fade-in">
+                <img src="Assets/Product Design/Apple Music Classical/Apple-Music-Classical-9.png"
+                    alt="The current Library interface and the proposed concept.">
+                <p class="detail-img-caption" style="text-align: center;">The current Library interface and the proposed
+                    concept.</p>
+            </div>
+
+            <!-- ============================
+           CONCLUSION
+           ============================ -->
+            <section class="detail-section fade-in" style="margin-top: var(--spacing-3xl);">
+                <h2 class="detail-section-title">Conclusion</h2>
+                <p>The analysis of Apple Music Classical shows that differences in information architecture and content
+                    presentation have a direct impact on how comfortable users feel moving between it and Apple Music.
+                </p>
+                <p>Enhancing Search with integrated categories and playlists, bringing personalization to Listen Now,
+                    restructuring Browse for familiarity, and aligning Library with Recently Added and editable filters
+                    all point to a more coherent experience—<strong>one where Apple Music Classical feels distinct yet
+                        clearly part of the same ecosystem.</strong></p>
+            </section>
+
+            <div class="detail-img fade-in" style="margin-bottom: var(--spacing-3xl);">
+                <img src="Assets/Product Design/Apple Music Classical/Apple-Music-Classical-10.png"
+                    alt="Apple Music Classical concept conclusion">
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Scroll fade-in animation (Apple TV-style) -->
+    <script>
+        (function () {
+            const faders = document.querySelectorAll('.fade-in');
+            if (!faders.length) return;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            faders.forEach(el => observer.observe(el));
+        })();
+    </script>
+
+</body>
+
+</html>
