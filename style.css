@@ -1059,7 +1059,7 @@ button {
    ============================================ */
 @media (max-width: 960px) {
   .main-layout {
-    padding-top: 80px;
+    padding-top: 130px;
   }
 
   .about-panel {
@@ -1070,23 +1070,8 @@ button {
   .project-grid.grid-4col {
     grid-template-columns: repeat(2, 1fr);
   }
-}
 
-@media (max-width: 600px) {
-  :root {
-    --nav-h-padding: 16px;
-  }
-
-  .main-layout,
-  .detail-page {
-    padding: 120px var(--nav-h-padding) var(--spacing-2xl);
-  }
-
-  .navbar {
-    padding: 12px var(--nav-h-padding);
-  }
-
-  /* Wrap navbar on mobile: name+About on top, pills below */
+  /* Wrap navbar earlier to prevent crowding: name+About on top, pills below */
   .nav-inner {
     flex-wrap: wrap;
   }
@@ -1110,6 +1095,21 @@ button {
   .nav-center .filter-pill {
     font-size: 0.75rem;
     padding: 6px 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --nav-h-padding: 16px;
+  }
+
+  .main-layout,
+  .detail-page {
+    padding: 130px var(--nav-h-padding) var(--spacing-2xl);
+  }
+
+  .navbar {
+    padding: 12px var(--nav-h-padding);
   }
 
   .project-grid {
