@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://emanueleagosta.github.io/portfolio/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://emanueleagosta.github.io/portfolio/project-broll.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://emanueleagosta.github.io/portfolio/project-geoshot.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://emanueleagosta.github.io/portfolio/project-medusa.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://emanueleagosta.github.io/portfolio/project-lucid.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://emanueleagosta.github.io/portfolio/project-apple-music-classical.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+</urlset>

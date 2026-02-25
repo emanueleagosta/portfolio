@@ -1259,3 +1259,50 @@ button {
 .project-card:nth-child(12) {
   animation-delay: 0.6s;
 }
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer {
+  margin-top: var(--spacing-2xl);
+  padding: var(--spacing-lg) var(--nav-h-padding);
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-copy {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  letter-spacing: -0.005em;
+}
+
+.footer-links {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.footer-links a {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  text-decoration: none;
+  transition: color 0.2s var(--ease);
+}
+
+.footer-links a:hover {
+  color: var(--text-primary);
+}
+
+@media (max-width: 600px) {
+  .footer-inner {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
