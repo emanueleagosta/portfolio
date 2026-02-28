@@ -1260,6 +1260,10 @@ button {
   animation-delay: 0.6s;
 }
 
+.project-card:nth-child(13) {
+  animation-delay: 0.65s;
+}
+
 /* ============================================
    FOOTER
    ============================================ */
