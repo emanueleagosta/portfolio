@@ -68,12 +68,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Dynamic Articles from Create with Swift ---
   const AUTHOR_URL = 'https://www.createwithswift.com/author/emanueleagosta/';
-  const CORS_PROXY = 'https://corsproxy.io/?';
+
+  // Multiple CORS proxies for reliability (free proxies can go down)
+  const CORS_PROXIES = [
+    (url) => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url),
+    (url) => 'https://corsproxy.io/?' + encodeURIComponent(url),
+    (url) => 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(url)
+  ];
 
   async function fetchPage(url) {
-    const response = await fetch(CORS_PROXY + encodeURIComponent(url));
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    return response.text();
+    let lastError;
+    for (const proxyFn of CORS_PROXIES) {
+      try {
+        const proxyUrl = proxyFn(url);
+        const response = await fetch(proxyUrl);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return response.text();
+      } catch (e) {
+        lastError = e;
+        // Try next proxy
+      }
+    }
+    throw lastError || new Error('All CORS proxies failed');
   }
 
   function parseArticles(html) {
@@ -183,6 +199,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    // Hide/show articles fallback based on active filter
+    const fallback = document.getElementById('articles-fallback');
+    if (fallback) {
+      if (filter !== 'articles') {
+        fallback.style.display = 'none';
+      }
+      // Note: fallback display is managed by loadArticles when filter IS 'articles'
+    }
+
     // Adjust grid columns for articles and talks via CSS class
     if (filter === 'articles' || filter === 'talks') {
       grid.classList.add('grid-4col');
@@ -248,13 +273,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-      refreshFilter();
-    });
-  });
 
   // Load articles
   loadArticles();
