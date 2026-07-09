@@ -481,15 +481,41 @@ button {
   padding: var(--spacing-3xl) var(--spacing-xl) var(--spacing-2xl);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xl);
+}
+
+.about-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.about-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.about-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.about-short-bio {
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+  margin: 0;
 }
 
 .about-profile-img {
   width: 80px;
   height: 80px;
-  margin: 0 auto;
   border-radius: 50%;
   overflow: hidden;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -503,6 +529,10 @@ button {
 }
 
 /* Narrative */
+.about-narrative {
+  margin-top: var(--spacing-xl);
+}
+
 .about-narrative p {
   font-size: 0.9375rem;
   line-height: 1.7;
@@ -512,10 +542,6 @@ button {
 
 .about-narrative p+p {
   margin-top: var(--spacing-md);
-}
-
-.about-narrative p:first-child {
-  font-weight: 500;
 }
 
 /* Meta rows */
@@ -1317,10 +1343,52 @@ button {
 .work-experience {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
   border-top: 1px solid var(--border);
-  padding-top: var(--spacing-md);
-  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+.work-experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
+  padding-top: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  padding: 8px 0;
+  transition: opacity 0.4s ease;
+}
+
+.contact-row:hover {
+  opacity: 0.7;
+}
+
+.contact-arrow, .work-arrow {
+  font-size: 1.1rem;
+  color: var(--text-tertiary);
+  font-weight: 400;
 }
 
 .work-experience-header {
@@ -1329,7 +1397,7 @@ button {
   color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
 }
 
 .work-row {
@@ -1373,22 +1441,22 @@ button {
 
 .work-company {
   font-weight: 500;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   color: var(--text-primary);
-  flex-basis: 35%;
+  flex-basis: 42%;
 }
 
 .work-role {
   color: var(--text-secondary);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   flex-basis: 35%;
 }
 
 .work-date {
   color: var(--text-tertiary);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   text-align: right;
-  flex-basis: 30%;
+  flex-basis: 23%;
 }
 
 @media (max-width: 600px) {
