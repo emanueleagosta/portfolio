@@ -443,7 +443,7 @@ button {
   top: 0;
   right: 0;
   z-index: 210;
-  width: 400px;
+  width: 600px;
   height: 100vh;
   background: var(--bg);
   border-left: 1px solid var(--border);
@@ -1063,7 +1063,7 @@ button {
   }
 
   .about-panel {
-    width: 340px;
+    width: 450px;
   }
 
   /* Medium screens: 4→2 columns for articles and talks */
@@ -1308,5 +1308,97 @@ button {
     flex-direction: column;
     gap: 8px;
     text-align: center;
+  }
+}
+
+/* ============================================
+   WORK EXPERIENCE
+   ============================================ */
+.work-experience {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  border-top: 1px solid var(--border);
+  padding-top: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.work-experience-header {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--spacing-xs);
+}
+
+.work-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.4s ease;
+}
+
+.work-row:hover {
+  opacity: 0.7;
+}
+
+.work-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white; /* In case the logo has transparent background */
+}
+
+.work-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work-info {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.work-company {
+  font-weight: 500;
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  flex-basis: 35%;
+}
+
+.work-role {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  flex-basis: 35%;
+}
+
+.work-date {
+  color: var(--text-tertiary);
+  font-size: 0.875rem;
+  text-align: right;
+  flex-basis: 30%;
+}
+
+@media (max-width: 600px) {
+  .work-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  .work-company, .work-role, .work-date {
+    flex-basis: auto;
+    text-align: left;
   }
 }
