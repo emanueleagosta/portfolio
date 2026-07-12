@@ -1470,3 +1470,54 @@ button {
     text-align: left;
   }
 }
+
+/* --- NDA Alert --- */
+.nda-alert {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--text-primary);
+  color: var(--bg);
+  padding: 12px 20px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  z-index: 2000;
+  opacity: 0;
+  transition: transform 0.4s var(--ease-spring), opacity 0.3s var(--ease);
+  pointer-events: none;
+  font-size: 0.9em;
+}
+
+.nda-alert.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nda-close {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  padding: 4px;
+}
+
+.nda-close:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .nda-alert {
+    width: calc(100% - 32px);
+    bottom: 16px;
+  }
+}

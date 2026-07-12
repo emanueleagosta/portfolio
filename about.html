@@ -186,6 +186,17 @@
           </div>
         </a>
 
+        <a href="#" class="project-card small-card" data-category="talks" onclick="showNDAAlert(event)">
+          <div class="project-thumbnail">
+            <span class="card-pill">designFAO 2024, Portugal</span>
+            <img loading="lazy" src="Assets/Talks/designfao.jpg" alt="designFAO 2024" class="thumbnail-img">
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Designing human‑centered spatial experiences</h3>
+            <p class="project-subtitle">From mouse to multi‑touch to spatial input, and what it means for designers.</p>
+          </div>
+        </a>
+
         <a href="https://www.xrsalento.it/xrsalento2025/demo/design-human-centered-spatial-experiences"
           class="project-card small-card" data-category="talks" target="_blank" rel="noopener">
           <div class="project-thumbnail">
@@ -196,18 +207,6 @@
             <h3 class="project-title">Designing human‑centered spatial experiences</h3>
             <p class="project-subtitle">Spatial interaction in visionOS and speculative design applied to different
               fields.</p>
-          </div>
-        </a>
-
-        <a href="https://www.designfao.com/blog/designing-human-centred-spatial-experiences"
-          class="project-card small-card" data-category="talks" target="_blank" rel="noopener">
-          <div class="project-thumbnail">
-            <span class="card-pill">designFAO 2024, Portugal</span>
-            <img loading="lazy" src="Assets/Talks/designfao.jpg" alt="designFAO 2024" class="thumbnail-img">
-          </div>
-          <div class="project-info">
-            <h3 class="project-title">Designing human‑centered spatial experiences</h3>
-            <p class="project-subtitle">From mouse to multi‑touch to spatial input, and what it means for designers.</p>
           </div>
         </a>
 
@@ -224,7 +223,7 @@
           </div>
         </a>
 
-        <a href="https://www.desina.it" class="project-card small-card" data-category="talks" target="_blank"
+        <a href="https://2024.desina.it/ospiti/imaginary-institute" class="project-card small-card" data-category="talks" target="_blank"
           rel="noopener">
           <div class="project-thumbnail">
             <span class="card-pill">DESINA 02 Festival, Napoli</span>
@@ -316,6 +315,16 @@
       <p class="footer-copy">&copy; 2026 Emanuele Agosta</p>
     </div>
   </footer>
+
+  <div class="nda-alert" id="nda-alert" aria-hidden="true">
+    <p>Protected by NDA. Please reach out to know more about this project.</p>
+    <button class="nda-close" id="nda-close" aria-label="Close">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
 
   <script src="script.js"></script>
 </body>

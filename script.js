@@ -227,3 +227,30 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load articles
   loadArticles();
 });
+
+// --- NDA Alert ---
+window.showNDAAlert = function(e) {
+  if (e) e.preventDefault();
+  const ndaAlert = document.getElementById('nda-alert');
+  if (ndaAlert) {
+    ndaAlert.classList.add('show');
+    ndaAlert.setAttribute('aria-hidden', 'false');
+    // auto hide after 5s
+    setTimeout(closeNDAAlert, 5000);
+  }
+};
+
+window.closeNDAAlert = function() {
+  const ndaAlert = document.getElementById('nda-alert');
+  if (ndaAlert) {
+    ndaAlert.classList.remove('show');
+    ndaAlert.setAttribute('aria-hidden', 'true');
+  }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const ndaCloseBtn = document.getElementById('nda-close');
+  if (ndaCloseBtn) {
+    ndaCloseBtn.addEventListener('click', closeNDAAlert);
+  }
+});
