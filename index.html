@@ -37,7 +37,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 
 <body>
@@ -45,13 +45,14 @@
   <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-inner">
-      <a href="index.html" class="nav-name">Emanuele Agosta</a>
       <div class="nav-center">
-        <button class="filter-pill active" data-filter="product-design">Product Design</button>
+        <button class="filter-pill active" data-filter="work">Work</button>
         <button class="filter-pill" data-filter="talks">Talks & Workshops</button>
-        <button class="filter-pill" data-filter="articles">Articles</button>
+        <button class="filter-pill" data-filter="writing">Writing</button>
       </div>
-      <div class="nav-right">
+      <div class="nav-right" style="margin-left: auto;">
+        <a href="https://www.behance.net/emanueleagosta" class="nav-link" target="_blank"
+          rel="noopener">Behance</a>
         <a href="https://www.linkedin.com/in/emanueleagosta/" class="nav-link" target="_blank"
           rel="noopener">LinkedIn</a>
         <button class="nav-pill nav-about" id="about-toggle">About</button>
@@ -63,102 +64,162 @@
   <main class="main-layout">
     <section class="archive-column">
 
+      <!-- Hero Section -->
+      <style>
+        .hero-link {
+          color: var(--text-primary);
+          text-decoration: none;
+          position: relative;
+          display: inline-block;
+          transition: color 0.2s ease;
+        }
+        .hero-link::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+          width: 100%;
+          height: 1px;
+          background: var(--text-primary);
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 0.3s ease;
+        }
+        .hero-link:hover {
+          color: var(--text-primary);
+        }
+        .hero-link:hover::after {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+      </style>
+      <div class="hero-section" id="hero" style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 48px; animation: fadeInUp 0.8s ease both;">
+        <img loading="lazy" src="Assets/General Assets/emanuele_agosta_profile.jpg" alt="Emanuele Agosta" style="width: 96px; height: 96px; border-radius: 50%; object-fit: cover; flex-shrink: 0; margin-top: 4px;">
+        
+        <div class="hero-text" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 96px; padding: 2px 0;">
+          <!-- Top Group -->
+          <div>
+            <h1 class="hero-name" style="margin: 0 0 2px 0;">Emanuele Agosta</h1>
+            <div class="hero-role" style="margin: 0;">Product Designer for mobile, desktop and spatial computing.</div>
+          </div>
+
+          <!-- Bottom Group (Experiences) -->
+          <div style="font-size: 13px; line-height: 1.35; color: #86868b; display: flex; flex-direction: column; gap: 2px;">
+            <div style="margin: 0; padding: 0;">Instructional Designer @ <a href="https://www.tesla.com" target="_blank" rel="noopener" class="hero-link">Tesla</a>.</div>
+            <div style="margin: 0; padding: 0;">Previously Senior Design Mentor @ <a href="https://developer.apple.com/academies/" target="_blank" rel="noopener" class="hero-link">Apple Developer Academy</a>.</div>
+          </div>
+        </div>
+      </div>
+
       <!-- Project Grid -->
       <div class="project-grid">
 
-        <!-- Product Design Projects -->
-        <a href="project-broll.html" class="project-card wide-card" data-category="product-design">
+        <!-- UX & Learning -->
+        <div class="grid-section-label" data-category="work">UX & Learning</div>
+
+        <a href="project-tesla-fsd.html" class="project-card wide-card" data-category="work">
+          <div class="project-thumbnail">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1617791160505-6f00504e3519?q=80&w=2600&auto=format&fit=crop" alt="Tesla FSD Learning System thumbnail" class="thumbnail-img">
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Tesla Full-Self Driving (Supervised) - Content Design System</h3>
+            <p class="project-subtitle">Enterprise L&D · 2025 – Present · Confidential</p>
+          </div>
+        </a>
+
+        <a href="project-apple-academy.html" class="project-card wide-card" data-category="work">
+          <div class="project-thumbnail">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2600&auto=format&fit=crop" alt="Apple Developer Academy thumbnail" class="thumbnail-img">
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Apple Developer Academy</h3>
+            <p class="project-subtitle">Curriculum and Mentorship · 2019–2025 · Confidential</p>
+          </div>
+        </a>
+
+        <!-- Product Design -->
+        <div class="grid-section-label" data-category="work" style="margin-top: var(--spacing-xl);">Product Design</div>
+
+        <a href="project-broll.html" class="project-card wide-card" data-category="work">
           <div class="project-thumbnail">
             <img loading="lazy" src="Assets/Product Design/B.Roll/B.Roll-thumbnail.png" alt="B.Roll app thumbnail"
               class="thumbnail-img">
           </div>
           <div class="project-info">
             <h3 class="project-title">B.Roll – Movies & TV Tracker</h3>
-            <p class="project-subtitle">iOS and iPadOS App</p>
+            <p class="project-subtitle">iOS and iPadOS App · 2025</p>
           </div>
         </a>
 
-        <a href="project-geoshot.html" class="project-card wide-card" data-category="product-design">
+        <a href="project-geoshot.html" class="project-card wide-card" data-category="work">
           <div class="project-thumbnail">
             <img loading="lazy" src="Assets/Product Design/Geoshot/Geoshot-thumbnail.png" alt="Geoshot app thumbnail"
               class="thumbnail-img">
           </div>
           <div class="project-info">
             <h3 class="project-title">Geoshot - Map Snapshots</h3>
-            <p class="project-subtitle">iOS App</p>
+            <p class="project-subtitle">iOS app · 2024</p>
           </div>
         </a>
 
-        <a href="project-medusa.html" class="project-card wide-card" data-category="product-design">
+        <a href="project-medusa.html" class="project-card wide-card" data-category="work">
           <div class="project-thumbnail">
             <img loading="lazy" src="Assets/Product Design/Medusa/Medusa-thumbnail.png" alt="Medusa app thumbnail"
               class="thumbnail-img">
           </div>
           <div class="project-info">
             <h3 class="project-title">Medusa - Cursor</h3>
-            <p class="project-subtitle">macOS App</p>
+            <p class="project-subtitle">Create with Swift · macOS app · 2025</p>
           </div>
         </a>
 
-        <a href="project-lucid.html" class="project-card wide-card" data-category="product-design">
+        <a href="project-lucid.html" class="project-card wide-card" data-category="work">
           <div class="project-thumbnail">
             <img loading="lazy" src="Assets/Product Design/Lucid/Lucid-thumbnail.png" alt="Lucid app thumbnail"
               class="thumbnail-img">
           </div>
           <div class="project-info">
             <h3 class="project-title">Lucid - Floating Timers</h3>
-            <p class="project-subtitle">macOS App</p>
+            <p class="project-subtitle">Create with Swift · macOS app · 2025</p>
           </div>
         </a>
 
-        <a href="project-apple-music-classical.html" class="project-card wide-card" data-category="product-design">
+        <a href="project-apple-music-classical.html" class="project-card wide-card" data-category="work">
           <div class="project-thumbnail">
             <img loading="lazy" src="Assets/Product Design/Apple Music Classical/Apple_Music_Classical_thumbnail.png"
               alt="Apple Music Classical thumbnail" class="thumbnail-img">
           </div>
           <div class="project-info">
             <h3 class="project-title">Apple Music Classical</h3>
-            <p class="project-subtitle">UX Case Study (2023)</p>
-          </div>
-        </a>
-
-        <a href="https://www.behance.net/emanueleagosta" class="project-card wide-card" data-category="product-design"
-          target="_blank" rel="noopener">
-          <div class="project-thumbnail">
-            <img loading="lazy" src="Assets/General Assets/Behance_thumbnail.png" alt="Behance Projects thumbnail"
-              class="thumbnail-img">
-          </div>
-          <div class="project-info">
-            <h3 class="project-title">Behance Projects ↗</h3>
-            <p class="project-subtitle">Archive of UX Projects</p>
+            <p class="project-subtitle">UX Case Study · 2023</p>
           </div>
         </a>
 
         <!-- Articles (dynamically loaded from Create with Swift) -->
         <div id="articles-container">
           <!-- Skeleton placeholders shown while loading -->
-          <div class="article-skeleton project-card small-card" data-category="articles">
+          <div class="article-skeleton project-card small-card" data-category="writing">
             <div class="project-thumbnail skeleton-thumbnail"></div>
             <div class="project-info">
               <div class="skeleton-title"></div>
               <div class="skeleton-subtitle"></div>
             </div>
           </div>
-          <div class="article-skeleton project-card small-card" data-category="articles">
+          <div class="article-skeleton project-card small-card" data-category="writing">
             <div class="project-thumbnail skeleton-thumbnail"></div>
             <div class="project-info">
               <div class="skeleton-title"></div>
               <div class="skeleton-subtitle"></div>
             </div>
           </div>
-          <div class="article-skeleton project-card small-card" data-category="articles">
+          <div class="article-skeleton project-card small-card" data-category="writing">
             <div class="project-thumbnail skeleton-thumbnail"></div>
             <div class="project-info">
               <div class="skeleton-title"></div>
               <div class="skeleton-subtitle"></div>
             </div>
           </div>
-          <div class="article-skeleton project-card small-card" data-category="articles">
+          <div class="article-skeleton project-card small-card" data-category="writing">
             <div class="project-thumbnail skeleton-thumbnail"></div>
             <div class="project-info">
               <div class="skeleton-title"></div>
@@ -168,7 +229,7 @@
         </div>
         <!-- Fallback if articles fail to load -->
         <a href="https://www.createwithswift.com/author/emanueleagosta/" target="_blank" rel="noopener"
-          class="articles-fallback" id="articles-fallback" data-category="articles" style="display: none;">
+          class="articles-fallback" id="articles-fallback" data-category="writing" style="display: none;">
           View articles on Create with Swift ↗
         </a>
 

@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
       card.target = '_blank';
       card.rel = 'noopener';
       card.className = 'project-card small-card';
-      card.dataset.category = 'articles';
+      card.dataset.category = 'writing';
 
       // Initial hidden state for animation
       card.style.display = 'none';
@@ -155,17 +155,36 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    // Hide/show hero section and labels based on active filter
+    const heroSection = document.querySelector('.hero-section');
+    if (heroSection) {
+      if (filter !== 'work') {
+        heroSection.style.display = 'none';
+      } else {
+        heroSection.style.display = 'flex';
+      }
+    }
+
+    const labels = document.querySelectorAll('.grid-section-label');
+    labels.forEach(label => {
+      if (label.dataset.category === filter) {
+        label.style.display = '';
+      } else {
+        label.style.display = 'none';
+      }
+    });
+
     // Hide/show articles fallback based on active filter
     const fallback = document.getElementById('articles-fallback');
     if (fallback) {
-      if (filter !== 'articles') {
+      if (filter !== 'writing') {
         fallback.style.display = 'none';
       }
-      // Note: fallback display is managed by loadArticles when filter IS 'articles'
+      // Note: fallback display is managed by loadArticles when filter IS 'writing'
     }
 
     // Adjust grid columns for articles and talks via CSS class
-    if (filter === 'articles' || filter === 'talks') {
+    if (filter === 'writing' || filter === 'talks') {
       grid.classList.add('grid-4col');
     } else {
       grid.classList.remove('grid-4col');

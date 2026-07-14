@@ -93,10 +93,14 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 /* Center group for filter pills in navbar */
 .nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   gap: var(--spacing-xs);
@@ -233,6 +237,65 @@ button {
 }
 
 /* ============================================
+   HERO SECTION
+   ============================================ */
+.hero-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.hero-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.hero-text {
+  line-height: 1.35;
+}
+
+.hero-name {
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin: 0 0 2px 0;
+  line-height: 1.1;
+}
+
+.hero-role {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin: 0 0 2px 0;
+  letter-spacing: -0.01em;
+}
+
+.hero-timeline {
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.inline-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-pill);
+  padding-bottom: 1px;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.inline-link:hover {
+  border-color: var(--text-primary);
+}
+
+/* ============================================
    PROJECT GRID
    ============================================ */
 .project-grid {
@@ -243,6 +306,18 @@ button {
 
 .project-grid.grid-4col {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-section-label {
+  grid-column: 1 / -1;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  margin-top: 0;
+  margin-bottom: calc(var(--spacing-lg) * -0.5);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: var(--spacing-sm);
 }
 
 /* ============================================
@@ -297,7 +372,7 @@ button {
   aspect-ratio: 4 / 3;
 }
 
-/* --- Card Category Pill (Articles only) --- */
+/* --- Card Category Pill --- */
 .card-pill {
   position: absolute;
   top: var(--spacing-sm);
