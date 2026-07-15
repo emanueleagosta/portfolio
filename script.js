@@ -3,67 +3,69 @@ document.addEventListener('DOMContentLoaded', () => {
   const projectCards = document.querySelectorAll('.project-card');
   const grid = document.querySelector('.project-grid');
 
-  // --- Filter logic ---
+  // --- Filter & About View logic ---
+  const aboutToggle = document.getElementById('about-toggle');
+  const aboutView = document.getElementById('about-view');
+
   if (filterButtons.length && grid) {
+    // Normal filter clicks
     filterButtons.forEach(button => {
       button.addEventListener('click', () => {
+        // Remove active from all filters and about
         filterButtons.forEach(btn => btn.classList.remove('active'));
+        if (aboutToggle) aboutToggle.classList.remove('active');
+        
         button.classList.add('active');
-        refreshFilter();
+        
+        // Hide about view, show grid
+        if (aboutView) {
+          aboutView.classList.remove('active');
+          setTimeout(() => {
+            if (!aboutToggle.classList.contains('active')) {
+              grid.style.display = '';
+              refreshFilter();
+            }
+          }, 400); // match CSS transition duration
+        } else {
+          refreshFilter();
+        }
       });
     });
+
+    // About toggle click
+    if (aboutToggle && aboutView) {
+      aboutToggle.addEventListener('click', () => {
+        // Remove active from filters
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        aboutToggle.classList.add('active');
+
+        // Hide grid, show about view
+        grid.style.display = 'none';
+        
+        // Ensure Hero Section is visible
+        const heroSection = document.querySelector('.hero-section');
+        if (heroSection) heroSection.style.display = 'flex';
+        
+        // Ensure section labels are hidden
+        const labels = document.querySelectorAll('.grid-section-label');
+        labels.forEach(label => label.style.display = 'none');
+        
+        // Ensure fallback is hidden
+        const fallback = document.getElementById('articles-fallback');
+        if (fallback) fallback.style.display = 'none';
+
+        // Add small delay to ensure display:none applied before triggering transition
+        setTimeout(() => {
+          aboutView.classList.add('active');
+        }, 10);
+      });
+    }
 
     // Trigger initial filter
     const defaultFilter = document.querySelector('.filter-pill.active');
     if (defaultFilter) {
       defaultFilter.click();
     }
-  }
-
-  // --- About panel toggle ---
-  const aboutToggle = document.getElementById('about-toggle');
-  const aboutPanel = document.getElementById('about-panel');
-  const aboutBackdrop = document.getElementById('about-backdrop');
-  const aboutCloseBtn = document.getElementById('about-close');
-
-  if (aboutToggle && aboutPanel && aboutBackdrop) {
-    function openAbout() {
-      aboutPanel.classList.add('open');
-      aboutBackdrop.classList.add('open');
-      aboutToggle.classList.add('active');
-      aboutPanel.setAttribute('aria-hidden', 'false');
-    }
-
-    function closeAbout() {
-      aboutPanel.classList.remove('open');
-      aboutBackdrop.classList.remove('open');
-      aboutToggle.classList.remove('active');
-      aboutPanel.setAttribute('aria-hidden', 'true');
-    }
-
-    aboutToggle.addEventListener('click', () => {
-      const isOpen = aboutPanel.classList.contains('open');
-      if (isOpen) {
-        closeAbout();
-      } else {
-        openAbout();
-      }
-    });
-
-    // Close on backdrop click
-    aboutBackdrop.addEventListener('click', closeAbout);
-
-    // Close on X button click
-    if (aboutCloseBtn) {
-      aboutCloseBtn.addEventListener('click', closeAbout);
-    }
-
-    // Close on Escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && aboutPanel.classList.contains('open')) {
-        closeAbout();
-      }
-    });
   }
 
   // --- Dynamic Articles from Create with Swift ---
