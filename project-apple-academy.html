@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Developer Academy – Design Program – Emanuele Agosta</title>
+    <meta name="description"
+        content="Apple Developer Academy Case Study by Emanuele Agosta.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="Assets/General Assets/favicon.png">
+    <link rel="apple-touch-icon" href="Assets/General Assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific styling to enlarge images beyond the text container just for this page */
+        @media (min-width: 960px) {
+            .detail-img.oversize-img {
+                margin-left: -120px;
+                margin-right: -120px;
+                width: calc(100% + 240px);
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 959px) {
+            .detail-img.oversize-img {
+                margin-left: -40px;
+                margin-right: -40px;
+                width: calc(100% + 80px);
+            }
+        }
+
+        /* Two-column layout for project meta */
+        .project-meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 2.5fr;
+            gap: 120px;
+        }
+        @media (max-width: 960px) {
+            .project-meta-grid {
+                gap: 64px;
+            }
+        }
+        @media (max-width: 768px) {
+            .project-meta-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-name">Emanuele Agosta</a>
+            <div class="nav-right" style="margin-left: auto;">
+                <a href="https://www.linkedin.com/in/emanueleagosta/" class="nav-link" target="_blank"
+                    rel="noopener">LinkedIn</a>
+                <a href="index.html" class="nav-pill nav-about">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Detail Content -->
+    <main class="detail-page">
+        <div class="detail-inner">
+
+            <!-- Back link -->
+            <a href="index.html" class="back-link">← Back to index</a>
+
+            <!-- HERO -->
+            <div class="detail-header">
+                <h1 class="detail-title">Apple Developer Academy — Design Program</h1>
+                <p class="detail-subtitle">Curriculum and Mentorship for native Apple platforms apps design and development.</p>
+            </div>
+
+            <!-- HERO MOCKUP -->
+            <div class="detail-img oversize-img fade-in">
+                <!-- Placeholder image for hero -->
+                <img loading="lazy" src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2600&auto=format&fit=crop" alt="Apple Developer Academy Mentorship">
+                <p class="detail-img-caption" style="text-align: center;">Fostering the next generation of designers and developers.</p>
+            </div>
+
+            <!-- PROJECT META -->
+            <section class="detail-section fade-in project-meta-grid" style="margin-top: var(--spacing-2xl);">
+                <!-- Left Column -->
+                <div style="display: flex; flex-direction: column; gap: var(--spacing-xl);">
+                    <div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">Type</div>
+                        <div style="font-weight: 500;">Design Education & Mentorship</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">Role</div>
+                        <div style="font-weight: 500;">Senior Design Mentor</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">Team</div>
+                        <div style="font-weight: 500;">Design, Development, Business Teams</div>
+                    </div>
+                </div>
+                <!-- Right Column -->
+                <div style="display: flex; flex-direction: column; gap: var(--spacing-xl);">
+                    <div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">About</div>
+                        <p>For 6 years at the Apple Developer Academy, I guided hundreds of students in building world-class native applications. I helped shape the overarching educational curriculum based on Challenge-Based Learning, focusing heavily on Apple's Human Interface Guidelines (HIG), SwiftUI, and Spatial Computing.</p>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">My Role</div>
+                        <p>Mentored multidisciplinary teams through the entire product lifecycle—from foundational user research and rapid prototyping to pixel-perfect UI execution and successfully shipping native apps to the global App Store.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NDA DISCLAIMER -->
+            <section class="detail-section fade-in" style="margin-top: 120px; margin-bottom: 80px; text-align: center;">
+                <p style="color: var(--text-secondary); margin-bottom: 8px;">Designed and facilitated Curriculum at Apple Developer Academy. <a href="https://developer.apple.com/academies/" target="_blank" rel="noopener" style="color: var(--text-primary); font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--text-primary); padding-bottom: 1px;">Learn more</a></p>
+                <p style="color: var(--text-tertiary);">Specific student projects and internal academy curriculum details remain confidential. What's shown here focuses on educational methodology and process.</p>
+            </section>
+
+            <!-- THE PROBLEM -->
+            <section class="detail-section fade-in" style="margin-top: var(--spacing-3xl);">
+                <h2 class="detail-section-title">The Challenge</h2>
+                <p>The transition from a traditional classroom environment to a professional, product-driven workflow is incredibly steep for aspiring developers and designers. Our core challenge was twofold:</p>
+                <ul style="margin-top: var(--spacing-md); padding-left: var(--spacing-lg); color: var(--text-secondary); line-height: 1.6;">
+                    <li style="margin-bottom: var(--spacing-xs);"><strong>Bridging the Gap:</strong> How do we take students with vastly different backgrounds (from computer science to fine arts) and mold them into high-performing, cross-functional product teams within a 9-month timeframe?</li>
+                    <li style="margin-bottom: var(--spacing-xs);"><strong>Pacing with Innovation:</strong> Apple's ecosystem evolves at breakneck speed. The curriculum had to be adaptable enough to instantly incorporate major paradigm shifts, such as the introduction of SwiftUI and the groundbreaking spatial design principles for visionOS.</li>
+                </ul>
+            </section>
+
+            <!-- IMAGE PLACEHOLDER -->
+            <div class="detail-img oversize-img fade-in">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2600&auto=format&fit=crop" alt="Students collaborating">
+                <p class="detail-img-caption" style="text-align: center;">Fostering cross-functional collaboration using Challenge-Based Learning.</p>
+            </div>
+
+            <!-- PROCESS -->
+            <section class="detail-section fade-in" style="margin-top: var(--spacing-3xl);">
+                <h2 class="detail-section-title">Process & Methodology</h2>
+                <p>I championed a <strong>Challenge-Based Learning (CBL)</strong> framework. Rather than lecturing from a textbook, we presented students with high-level, open-ended global challenges (e.g., "Sustainability," "Accessibility," "Education").</p>
+                <p><strong>Design as a Strategy:</strong> I mentored teams on treating design not just as visual decoration, but as a strategic business tool. I led intensive workshops on the Human Interface Guidelines, ensuring students understood <em>why</em> certain UX patterns exist on iOS and macOS, rather than just how to implement them.</p>
+                <p><strong>Cross-Disciplinary Empathy:</strong> A significant part of my role involved mediating between design and development students. I created frameworks to help designers hand off assets efficiently in Figma, and taught developers how to interpret and respect design constraints, simulating a true Agile environment.</p>
+            </section>
+
+            <!-- IMAGE PLACEHOLDER -->
+            <div class="detail-img oversize-img fade-in">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2600&auto=format&fit=crop" alt="Prototyping and Wireframing">
+                <p class="detail-img-caption" style="text-align: center;">Translating rough concepts into polished native iOS experiences.</p>
+            </div>
+
+            <!-- SOLUTION -->
+            <section class="detail-section fade-in" style="margin-top: var(--spacing-3xl);">
+                <h2 class="detail-section-title">The Outcomes</h2>
+                <p>Over my 6-year tenure, the program became a well-oiled incubator for top-tier tech talent.</p>
+                <p>By enforcing rigorous design critiques and maintaining an uncompromising standard for usability and accessibility, we saw a massive increase in the quality of the final apps produced by the cohorts.</p>
+                <p>Teams under my direct mentorship consistently pushed boundaries, moving beyond simple utility apps to craft deeply engaging, system-native experiences that felt right at home on Apple devices.</p>
+            </section>
+
+            <!-- MULTIPLE MOCKUPS PLACEHOLDER -->
+            <div class="mockup-row fade-in" style="margin-top: var(--spacing-xl);">
+                <div class="mockup-frame">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800&auto=format&fit=crop" alt="Mobile App UI 1">
+                </div>
+                <div class="mockup-frame">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=800&auto=format&fit=crop" alt="Mobile App UI 2">
+                </div>
+                <div class="mockup-frame">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?q=80&w=800&auto=format&fit=crop" alt="Mobile App UI 3">
+                </div>
+            </div>
+
+            <!-- RESULTS -->
+            <section class="detail-section fade-in" style="margin-top: var(--spacing-3xl);">
+                <h2 class="detail-section-title">Impact & Legacy</h2>
+                <p>The true measure of this project isn't found in a single product, but in the ripple effect across the global tech industry.</p>
+                
+                <ul style="margin-top: var(--spacing-md); padding-left: var(--spacing-lg); color: var(--text-secondary); line-height: 1.6;">
+                    <li style="margin-bottom: var(--spacing-xs);"><strong>Alumni Success:</strong> Hundreds of students I mentored are now leading design and engineering teams at top-tier global companies, including Apple, Tesla, and heavily funded startups.</li>
+                    <li style="margin-bottom: var(--spacing-xs);"><strong>App Store Presence:</strong> Mentored teams successfully launched dozens of native applications to the global App Store, many of which were featured by Apple and garnered significant user bases.</li>
+                </ul>
+
+                <h3 style="font-size: 1.125rem; font-weight: 600; margin: var(--spacing-xl) 0 var(--spacing-sm) 0; color: var(--text-primary);">Personal Learnings</h3>
+                <p>Teaching is the ultimate test of mastery. Mentoring hundreds of students forced me to deconstruct my own intuitive design processes into communicable, scalable methodologies. It radically sharpened my ability to give constructive, actionable feedback and deepened my own technical expertise across Apple's entire software ecosystem.</p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="footer-copy">&copy; 2026 Emanuele Agosta</p>
+        </div>
+    </footer>
+
+    <!-- Scroll fade-in animation (Apple TV-style) -->
+    <script>
+        (function () {
+            const faders = document.querySelectorAll('.fade-in');
+            if (!faders.length) return;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            faders.forEach(el => observer.observe(el));
+        })();
+    </script>
+
+</body>
+
+</html>

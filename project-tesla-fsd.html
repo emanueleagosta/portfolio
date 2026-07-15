@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla Full Self-Driving – Content Design System – Emanuele Agosta</title>
+    <meta name="description"
+        content="Tesla Full Self-Driving (Supervised) Content Design System Case Study by Emanuele Agosta.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="Assets/General Assets/favicon.png">
+    <link rel="apple-touch-icon" href="Assets/General Assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific styling to enlarge images beyond the text container just for this page */
+        @media (min-width: 960px) {
+            .detail-img.oversize-img {
+                margin-left: -120px;
+                margin-right: -120px;
+                width: calc(100% + 240px);
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 959px) {
+            .detail-img.oversize-img {
+                margin-left: -40px;
+                margin-right: -40px;
+                width: calc(100% + 80px);
+            }
+        }
+
+        /* Two-column layout for project meta */
+        .project-meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 2.5fr;
+            gap: 120px;
+        }
+        @media (max-width: 960px) {
+            .project-meta-grid {
+                gap: 64px;
+            }
+        }
+        @media (max-width: 768px) {
+            .project-meta-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-name">Emanuele Agosta</a>
+            <div class="nav-right" style="margin-left: auto;">
+                <a href="https://www.linkedin.com/in/emanueleagosta/" class="nav-link" target="_blank"
+                    rel="noopener">LinkedIn</a>
+                <a href="index.html" class="nav-pill nav-about">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Detail Content -->
+    <main class="detail-page">
+        <div class="detail-inner">
+
+            <!-- Back link -->
+            <a href="index.html" class="back-link">← Back to index</a>
+
+            <!-- HERO -->
+            <div class="detail-header">
+                <h1 class="detail-title">Tesla Full Self-Driving (Supervised) — Content Design System</h1>
+                <p class="detail-subtitle">Designing an enterprise learning architecture to scale internal training for complex ADAS features.</p>
+            </div>
+
+            <!-- HERO MOCKUP -->
+            <div class="detail-img oversize-img fade-in">
+                <!-- Placeholder image for hero -->
+                <img loading="lazy" src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?q=80&w=2600&auto=format&fit=crop" alt="Tesla FSD Content Design System">
+                <p class="detail-img-caption" style="text-align: center;">Abstract representation of the proprietary FSD Content Design System.</p>
+            </div>
+
+            <!-- PROJECT META -->
+            <section class="detail-section fade-in project-meta-grid" style="margin-top: var(--spacing-2xl);">
+                <!-- Left Column -->
+                <div style="display: flex; flex-direction: column; gap: var(--spacing-xl);">
+                    <div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">Type</div>
+                        <div style="font-weight: 500;">Enterprise Learning Design</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">Role</div>
+                        <div style="font-weight: 500;">UX and Instructional Designer</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">Team</div>
+                        <div style="font-weight: 500;">Learning & Development, Customer Excellence</div>
+                    </div>
+                </div>
+                <!-- Right Column -->
+                <div style="display: flex; flex-direction: column; gap: var(--spacing-xl);">
+                    <div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">About</div>
+                        <p>At Tesla, I helped envision and design the learning architecture that scales internal training for complex ADAS features. Based on technical constraints and product requirements, I collaborated with SMEs to ship a modular content design system that translated the intricacies of the Vision Platform and SAE Level 2 automation into accessible, standardized learning modules.</p>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">My Role</div>
+                        <p>Worked on an end-to-end learning framework: created an innovative instructional taxonomy for the internal authoring tools, ensuring crucial safety messaging and legal disclaimers remained 100% consistent across all materials, aligning with Tesla's vision and brand.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NDA DISCLAIMER -->
+            <section class="detail-section fade-in" style="margin-top: 120px; margin-bottom: 80px; text-align: center;">
+                <p style="color: var(--text-secondary); margin-bottom: 8px;">Designed Learning Ecosystem for Tesla Full-Self Driving (Supervised) EMEA. <a href="https://www.tesla.com/nl_nl/fsd" target="_blank" rel="noopener" style="color: var(--text-primary); font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--text-primary); padding-bottom: 1px;">Learn more</a></p>
+                <p style="color: var(--text-tertiary);">This project sits under NDA. What's shown here is limited to role and process.</p>
+            </section>
+
+            <!-- THE PROBLEM -->
+            <section class="detail-section fade-in" style="margin-top: var(--spacing-3xl);">
+                <h2 class="detail-section-title">The Challenge</h2>
+                <p>Prior to establishing a unified content system, internal training materials on advanced features like <em>Autosteer on City Streets</em> and <em>Traffic Light and Stop Sign Control</em> were often fragmented. Content was being created ad-hoc, leading to several critical business friction points:</p>
+                <ul style="margin-top: var(--spacing-md); padding-left: var(--spacing-lg); color: var(--text-secondary); line-height: 1.6;">
+                    <li style="margin-bottom: var(--spacing-xs);"><strong>Messaging Alignment:</strong> A critical need existed to standardize safety messaging. It was imperative to uniformly communicate that FSD remains an SAE Level 2 system requiring active driver supervision, actively mitigating complacency risk across all materials.</li>
+                    <li style="margin-bottom: var(--spacing-xs);"><strong>Content Velocity:</strong> The lack of reusable components meant that every time a new software version dropped, instructional content had to be built from scratch, causing bottlenecks.</li>
+                    <li style="margin-bottom: var(--spacing-xs);"><strong>Cognitive Overload:</strong> Internal onboarding materials were frequently too dense, over-indexing on technical jargon rather than actionable learning outcomes.</li>
+                </ul>
+            </section>
+
+            <!-- IMAGE PLACEHOLDER -->
+            <div class="detail-img oversize-img fade-in">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2600&auto=format&fit=crop" alt="Abstract Data and Fragmentation">
+                <p class="detail-img-caption" style="text-align: center;">Mapping the fragmented state of legacy instructional content across internal systems.</p>
+            </div>
+
+            <!-- PROCESS -->
+            <section class="detail-section fade-in" style="margin-top: var(--spacing-3xl);">
+                <h2 class="detail-section-title">Methodology & Governance</h2>
+                <p>To solve the bottleneck, I proposed shifting from individual course creation to a systemic <strong>Content Design System</strong>. This required establishing strong governance and cross-functional alignment.</p>
+                <p><strong>Adopting a "Do Less" Approach:</strong> By stripping away extraneous cognitive load, we focused on core learning experiences. We developed strict taxonomies that simplified complex engineering jargon—such as neural network heuristics—without sacrificing technical accuracy.</p>
+                <p><strong>Cross-Functional Collaboration:</strong> Partnering directly with engineering Subject Matter Experts (SMEs) and safety teams was crucial. We audited the entire learning flow to ensure that every module accurately reflected the critical shift to the "(Supervised)" terminology and its accompanying legal and safety implications.</p>
+            </section>
+
+            <!-- IMAGE PLACEHOLDER -->
+            <div class="detail-img oversize-img fade-in">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?q=80&w=2600&auto=format&fit=crop" alt="Content System Architecture Wireframe Placeholder">
+                <p class="detail-img-caption" style="text-align: center;">Abstracted wireframes illustrating the new modular learning taxonomy.</p>
+            </div>
+
+            <!-- SOLUTION -->
+            <section class="detail-section fade-in" style="margin-top: var(--spacing-3xl);">
+                <h2 class="detail-section-title">The Solution</h2>
+                <p>The resulting deliverable was a standardized, modular framework for all FSD (Supervised) L&D materials, hosted on proprietary internal authoring tools.</p>
+                <p>Instead of building bespoke courses, the team now had access to <strong>reusable learning templates</strong>. For example, when rolling out an update for <em>Traffic Light and Stop Sign Control</em>, instructional designers could pull pre-approved content blocks that automatically enforced consistent voice, tone, and the mandatory "Active supervision required" safety disclaimers.</p>
+                <p>This architecture allowed the L&D team to rapidly assemble, rather than write, new training flows. It abstracted the UI layer for content authors, allowing them to focus entirely on pedagogy.</p>
+            </section>
+
+            <!-- MULTIPLE MOCKUPS PLACEHOLDER -->
+            <div class="mockup-row fade-in" style="margin-top: var(--spacing-xl);">
+                <div class="mockup-frame">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1544396821-4dd40b938ad3?q=80&w=800&auto=format&fit=crop" alt="Module Template 1">
+                </div>
+                <div class="mockup-frame">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=800&auto=format&fit=crop" alt="Module Template 2">
+                </div>
+                <div class="mockup-frame">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop" alt="Module Template 3">
+                </div>
+            </div>
+
+            <!-- RESULTS -->
+            <section class="detail-section fade-in" style="margin-top: var(--spacing-3xl);">
+                <h2 class="detail-section-title">Impact & Learnings</h2>
+                <p>The implementation of the Content Design System fundamentally transformed how Tesla scales internal knowledge for ADAS features.</p>
+                
+                <ul style="margin-top: var(--spacing-md); padding-left: var(--spacing-lg); color: var(--text-secondary); line-height: 1.6;">
+                    <li style="margin-bottom: var(--spacing-xs);"><strong>Scalability:</strong> Drastically reduced the time-to-market required to roll out new instructional modules following consecutive FSD software updates.</li>
+                    <li style="margin-bottom: var(--spacing-xs);"><strong>100% Consistency:</strong> Achieved total alignment on safety messaging across all internal training touchpoints, ensuring every employee understands the paramount importance of driver responsibility.</li>
+                </ul>
+
+                <h3 style="font-size: 1.125rem; font-weight: 600; margin: var(--spacing-xl) 0 var(--spacing-sm) 0; color: var(--text-primary);">Key Learnings</h3>
+                <p>This project underscored the critical importance of building flexible, component-based content systems when operating in rapidly evolving regulatory environments. By decoupling the learning structure from the raw engineering data, we created an ecosystem that could adapt as fast as the software it was meant to teach.</p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="footer-copy">&copy; 2026 Emanuele Agosta</p>
+        </div>
+    </footer>
+
+    <!-- Scroll fade-in animation (Apple TV-style) -->
+    <script>
+        (function () {
+            const faders = document.querySelectorAll('.fade-in');
+            if (!faders.length) return;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            faders.forEach(el => observer.observe(el));
+        })();
+    </script>
+
+</body>
+
+</html>
