@@ -500,28 +500,23 @@ button {
   opacity: 0;
   transform: translateY(12px);
   visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   pointer-events: none;
   transition: opacity 0.4s var(--ease), transform 0.4s var(--ease), visibility 0.4s var(--ease);
+  display: none;
+  grid-template-columns: minmax(auto, 660px) minmax(auto, 540px);
+  justify-content: space-between;
+  align-items: start;
 }
 
 .about-view.active {
   opacity: 1;
   transform: translateY(0);
   visibility: visible;
-  position: relative;
   pointer-events: auto;
-  display: grid;
-  grid-template-columns: minmax(auto, 660px) minmax(auto, 540px);
-  justify-content: space-between;
-  align-items: start;
 }
 
 @media (max-width: 960px) {
-  .about-view.active {
+  .about-view {
     grid-template-columns: 1fr;
     gap: var(--spacing-2xl);
   }

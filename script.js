@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
           aboutView.classList.remove('active');
           setTimeout(() => {
             if (!aboutToggle.classList.contains('active')) {
+              aboutView.style.display = 'none';
               grid.style.display = '';
               refreshFilter();
             }
@@ -54,7 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const fallback = document.getElementById('articles-fallback');
         if (fallback) fallback.style.display = 'none';
 
-        // Add small delay to ensure display:none applied before triggering transition
+        // Add small delay to ensure display:grid applied before triggering transition
+        aboutView.style.display = 'grid';
         setTimeout(() => {
           aboutView.classList.add('active');
         }, 10);
